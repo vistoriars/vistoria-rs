@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Vistoria RS</title>
+<meta name="theme-color" content="#F5F5F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111112" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Vistoria RS">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2.5H7a2.5 2.5 0 0 0-2.5 2.5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z"/><path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h5"/></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="5" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="19" cy="12" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 18.5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-10a2 2 0 0 1 2-2h3.5l2-3h5l2 3H20a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="3.8"/></symbol>
+  <symbol id="i-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></symbol>
+  <symbol id="i-pdf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2.5H7a2.5 2.5 0 0 0-2.5 2.5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z"/><path d="M14 2.5V8h5.5M12 18v-6M9 15l3 3 3-3"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></symbol>
+  <symbol id="i-gcal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M12 12.5v5M9.5 15h5"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v2.8M12 18.7v2.8M4.6 4.6l2 2M17.4 17.4l2 2M2.5 12h2.8M18.7 12h2.8M4.6 19.4l2-2M17.4 6.6l2-2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14a6.5 6.5 0 0 1 3 6"/></symbol>
+  <symbol id="i-build" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9.5 21v-5h5v5M9 10h.01M15 10h.01M9 13h.01M15 13h.01"/></symbol>
+  <symbol id="i-pie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></symbol>
+  <symbol id="i-sheet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3" width="17" height="18" rx="2.5"/><path d="M3.5 9h17M3.5 15h17M10 9v12"/></symbol>
+  <symbol id="i-drive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 3h7l6 10.5-3.5 6h-12L2.5 13.5z"/><path d="M8.5 3l6 10.5h7M6 19.5l6-10.5M2.5 13.5h12"/></symbol>
+</svg>
+
+<!-- =================== AGENDA =================== -->
+<section id="pAgenda" class="page">
+  <header class="top"><div class="wrap">
+    <img class="logo lt" src="assets/logo-vistoria-rs.png" alt="Vistoria RS"><img class="logo dk" src="assets/logo-vistoria-rs-branco.png" alt="Vistoria RS">
+    <div class="ttl"></div>
+    <button class="ibtn" id="btnToday" aria-label="Ir para hoje" title="Hoje"><svg><use href="#i-cal"/></svg></button>
+  </div></header>
+  <main class="wrap stack">
+    <div id="driveNote" hidden></div>
+    <div class="card pad stack" style="gap:12px">
+      <div class="calhead">
+        <button class="ibtn flat" id="calPrev" aria-label="Mês anterior"><svg><use href="#i-back"/></svg></button>
+        <h1 id="calTitle"></h1>
+        <button class="ibtn flat" id="calNext" aria-label="Próximo mês"><svg><use href="#i-next"/></svg></button>
+      </div>
+      <div class="cal" id="cal"></div>
+      <div class="legend"><span><i style="background:var(--mark)"></i>Vistoria</span><span><i style="background:var(--rev)"></i>Revistoria</span><span><i style="background:var(--muted)"></i>Concluída</span></div>
+    </div>
+    <div class="dayhead"><b id="dayTitle"></b><span class="muted" id="dayCount"></span></div>
+    <div class="list" id="dayList"></div>
+    <div id="nextBox" class="stack" style="gap:8px"></div>
+  </main>
+  <button class="fab" id="fabAgendar"><svg><use href="#i-plus"/></svg>Agendar</button>
+</section>
+
+<!-- =================== RELATÓRIOS =================== -->
+<section id="pRel" class="page" hidden>
+  <header class="top"><div class="wrap"><div class="ttl"><b>Relatórios</b><span>Rascunhos neste aparelho e PDFs no Drive</span></div></div></header>
+  <main class="wrap stack">
+    <div class="grid2 keep">
+      <button class="btn accent" id="btnNew"><svg><use href="#i-plus"/></svg>Vistoria</button>
+      <button class="btn blue" id="btnNewRev"><svg><use href="#i-plus"/></svg>Revistoria</button>
+    </div>
+    <div class="row between">
+      <div class="seg" role="tablist"><button class="on" data-tab="local">Neste aparelho</button><button data-tab="drive">No Drive</button></div>
+      <span class="muted" id="listCount"></span>
+    </div>
+    <div class="field" id="filterRow" hidden><input id="q" placeholder="Buscar proprietário, condomínio, unidade…" aria-label="Buscar"></div>
+    <div id="cards" class="list"></div>
+    <div id="driveList" class="list" hidden></div>
+  </main>
+</section>
+
+<!-- =================== FINANCEIRO =================== -->
+<section id="pFin" class="page" hidden>
+  <header class="top"><div class="wrap"><div class="ttl"><b>Financeiro</b><span>Cobrado, recebido e a receber</span></div>
+    <button class="ibtn" id="btnExport" aria-label="Exportar para planilha" title="Exportar para planilha"><svg><use href="#i-sheet"/></svg></button></div></header>
+  <main class="wrap stack">
+    <div class="calhead card pad" style="padding:8px">
+      <button class="ibtn flat" id="finPrev" aria-label="Mês anterior"><svg><use href="#i-back"/></svg></button>
+      <h1 id="finTitle"></h1>
+      <button class="ibtn flat" id="finNext" aria-label="Próximo mês"><svg><use href="#i-next"/></svg></button>
+    </div>
+    <div class="kpis" id="kpis"></div>
+    <div class="card chartbox stack" style="gap:10px">
+      <div class="row between"><h2>Últimos 6 meses</h2><div class="lg"><span><i style="background:var(--bar-a)"></i>Cobrado</span><span><i style="background:var(--bar-b)"></i>Recebido</span></div></div>
+      <div id="chart"></div>
+      <div class="tip" id="chartTip">Toque numa coluna para ver os valores.</div>
+    </div>
+    <div class="row between"><h2>A receber</h2><span class="muted" id="pendTotal"></span></div>
+    <div class="list" id="pendList"></div>
+  </main>
+</section>
+
+<!-- =================== MAIS =================== -->
+<section id="pMais" class="page" hidden>
+  <header class="top"><div class="wrap"><div class="ttl"><b>Mais</b><span>Cadastros, indicadores e ajustes</span></div></div></header>
+  <main class="wrap stack">
+    <div class="menu">
+      <button id="mCli"><span class="ic"><svg><use href="#i-users"/></svg></span><span><b>Clientes</b><small>Telefone e histórico de cada cliente</small></span></button>
+      <button id="mCad"><span class="ic"><svg><use href="#i-build"/></svg></span><span><b>Construtoras e condomínios</b><small>Listas usadas no agendamento e no relatório</small></span></button>
+      <button id="mInd"><span class="ic"><svg><use href="#i-pie"/></svg></span><span><b>Indicadores por construtora</b><small>Serviços, faturamento e defeitos mais comuns</small></span></button>
+      <button id="mExp"><span class="ic"><svg><use href="#i-sheet"/></svg></span><span><b>Exportar para planilha Google</b><small>Todos os serviços e valores, na pasta do Drive</small></span></button>
+      <button id="mSet"><span class="ic"><svg><use href="#i-gear"/></svg></span><span><b>Ajustes</b><small>Google Drive, preços, mensagens, logos e textos</small></span><i class="dot" id="setDot" hidden style="width:8px;height:8px;border-radius:50%;background:var(--mark);margin-left:auto"></i></button>
+    </div>
+    <p class="muted" style="font-size:13px;margin:0">Agenda, clientes, valores e cadastros ficam guardados no seu Google Drive e aparecem iguais no celular e no computador. Fotos e rascunhos ficam só no aparelho.</p>
+  </main>
+</section>
+
+<nav class="tabbar" id="tabbar"><div class="wrap">
+  <button data-page="pAgenda" class="on"><svg><use href="#i-cal"/></svg>Agenda</button>
+  <button data-page="pRel"><svg><use href="#i-doc"/></svg>Relatórios</button>
+  <button data-page="pFin"><svg><use href="#i-money"/></svg>Financeiro</button>
+  <button data-page="pMais"><svg><use href="#i-more"/></svg>Mais</button>
+</div></nav>
+
+<!-- =================== RELATÓRIO (EDIÇÃO) =================== -->
+<div id="vInsp" class="sheet" hidden>
+  <header class="top"><div class="wrap">
+    <button class="ibtn" id="btnBack" aria-label="Voltar"><svg><use href="#i-back"/></svg></button>
+    <div class="ttl"><b id="iType">Vistoria</b><span id="iSub"></span></div>
+    <span id="iStatus"></span>
+  </div></header>
+  <main class="wrap stack">
+    <details class="group" id="idBox">
+      <summary><div class="idline" id="idLine"></div><svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="stack" style="margin-top:14px">
+        <div class="field"><label for="fCli">Cliente (proprietário)</label><select id="fCli"></select></div>
+        <div class="grid2">
+          <div class="field"><label for="fCon">Construtora</label><select id="fCon"></select></div>
+          <div class="field"><label for="fEmp">Condomínio</label><select id="fEmp"></select></div>
+        </div>
+        <div id="quickAdd" class="notice stack" style="gap:10px" hidden></div>
+        <div class="grid2">
+          <div class="field"><label for="fUni">Unidade</label><input id="fUni" placeholder="Bloco 3 / Apto 203" autocomplete="off"></div>
+          <div class="field"><label for="fDat">Data</label><input id="fDat" type="date"></div>
+        </div>
+        <div class="field"><label for="fEnd">Endereço (opcional)</label><input id="fEnd"></div>
+        <div class="field"><label for="fObs">Observação em destaque (sai em vermelho)</label><textarea id="fObs" placeholder="Ex.: Não foi possível testar a hidráulica"></textarea></div>
+        <div id="delZone"></div>
+      </div>
+    </details>
+    <div id="driveState"></div>
+    <div id="items"></div>
+  </main>
+  <div class="dock"><div class="wrap">
+    <label class="btn accent" for="inCam"><svg><use href="#i-cam"/></svg><span>Tirar foto</span></label>
+    <label class="btn" for="inGal"><svg><use href="#i-img"/></svg><span>Galeria</span></label>
+    <button class="btn primary" id="btnPdf"><svg><use href="#i-pdf"/></svg><span>Gerar PDF</span></button>
+  </div></div>
+  <input type="file" id="inCam" accept="image/*" capture="environment" hidden>
+  <input type="file" id="inGal" accept="image/*" multiple hidden>
+  <input type="file" id="inSwap" accept="image/*" hidden>
+</div>
+
+<!-- =================== EDITOR DE ITEM =================== -->
+<div id="vEdit" class="sheet" hidden>
+  <header class="top"><div class="wrap">
+    <button class="ibtn" id="edClose" aria-label="Fechar sem salvar"><svg><use href="#i-x"/></svg></button>
+    <div class="ttl"><b id="edTitle">Novo item</b><span>Marque o problema na foto e descreva</span></div>
+  </div></header>
+  <main class="wrap stack">
+    <div class="canvasbox" id="cbox"><canvas id="cv"></canvas></div>
+    <div class="tool" role="toolbar" aria-label="Ferramentas de marcação">
+      <button data-t="rect" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="6" width="16" height="12" rx="1"/></svg>Retângulo</button>
+      <button data-t="ellipse"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="12" rx="8" ry="6"/></svg>Círculo</button>
+      <button data-t="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 19L19 5M9 5h10v10"/></svg>Seta</button>
+      <button id="edUndo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg>Desfazer</button>
+      <button id="edSwap"><svg><use href="#i-cam"/></svg>Trocar foto</button>
+    </div>
+    <div class="field"><label>Ambiente</label><div class="chips" id="edAmbs"></div><input id="edAmbOther" placeholder="Outro ambiente…" hidden aria-label="Nome do ambiente"></div>
+    <div class="field"><label for="edDesc">Descrição</label><textarea id="edDesc" placeholder="Toque nas frases abaixo ou escreva"></textarea>
+      <div class="chips wrapchips" id="edPhr" style="margin-top:2px"></div></div>
+    <div id="edDelZone"></div>
+  </main>
+  <div class="sheetfoot"><div class="wrap"><button class="btn danger" id="edDel" style="flex:0 0 auto">Excluir</button><button class="btn primary" id="edSave">Salvar item</button></div></div>
+</div>
+
+<!-- =================== PDF =================== -->
+<div id="vPdf" class="sheet" hidden>
+  <header class="top"><div class="wrap">
+    <button class="ibtn" id="pdfClose" aria-label="Voltar"><svg><use href="#i-back"/></svg></button>
+    <div class="ttl"><b>Gerar PDF</b><span id="pdfSub"></span></div>
+  </div></header>
+  <main class="wrap stack">
+    <div class="card pad"><h2>Vai para o Google Drive em</h2><div class="mono" id="pdfPath" style="margin-top:6px;overflow-wrap:anywhere;font-size:13.5px"></div></div>
+    <div class="field"><label for="oName">Nome do arquivo</label><input id="oName" class="mono"></div>
+    <label class="check"><input type="checkbox" id="oCover" checked><span>Capa com logo e observação<small>Primeira página com a identificação e o aviso em vermelho.</small></span></label>
+    <label class="check"><input type="checkbox" id="oSelo" checked><span>Selo Vistoria RS entre as fotos<small>Como no relatório atual.</small></span></label>
+    <label class="check"><input type="checkbox" id="oNum"><span>Numerar itens<small>Mostra 01, 02, 03… na legenda de cada foto.</small></span></label>
+    <label class="check"><input type="checkbox" id="oSum"><span>Lista resumida no final<small>Tabela com todos os itens e espaço para assinatura.</small></span></label>
+    <div id="pdfMsg" class="notice" hidden></div>
+    <div class="prog" id="pdfProg" hidden><i></i></div>
+    <div class="stack" id="pdfAfter" hidden style="gap:8px">
+      <button class="btn wa full" id="pdfShare"><svg><use href="#i-wa"/></svg>Enviar ao cliente (WhatsApp)</button>
+      <div class="grid2 keep"><button class="btn" id="pdfDown">Baixar PDF</button><a class="btn" id="pdfOpen" target="_blank" rel="noopener" hidden>Abrir no Drive</a><button class="btn" id="pdfMark">Marcar como enviado</button></div>
+    </div>
+  </main>
+  <div class="sheetfoot"><div class="wrap"><button class="btn primary" id="pdfGo"><svg><use href="#i-pdf"/></svg>Gerar e salvar no Drive</button></div></div>
+</div>
+
+<!-- =================== SERVIÇO (AGENDAMENTO) =================== -->
+<div id="vServ" class="sheet" hidden>
+  <header class="top"><div class="wrap">
+    <button class="ibtn" id="svClose" aria-label="Voltar"><svg><use href="#i-back"/></svg></button>
+    <div class="ttl"><b id="svTitle">Agendar</b><span id="svSub"></span></div>
+    <span id="svStatus"></span>
+  </div></header>
+  <main class="wrap stack">
+    <div id="svBanner"></div>
+    <div class="group">
+      <div class="seg full" id="svTipo"><button data-v="vistoria" class="on">Vistoria</button><button data-v="revistoria">Revistoria</button></div>
+      <div class="grid2 keep">
+        <div class="field"><label for="svData">Data</label><input id="svData" type="date"></div>
+        <div class="field"><label for="svHora">Horário</label><input id="svHora" type="time" step="900"></div>
+      </div>
+      <div class="field"><label for="svCli">Cliente</label><select id="svCli"></select></div>
+      <div class="grid2">
+        <div class="field"><label for="svCon">Construtora</label><select id="svCon"></select></div>
+        <div class="field"><label for="svEmp">Condomínio</label><select id="svEmp"></select></div>
+      </div>
+      <div id="svQuick" class="notice stack" style="gap:10px" hidden></div>
+      <div class="field"><label for="svUni">Unidade</label><input id="svUni" placeholder="Bloco 3 / Apto 203" autocomplete="off"></div>
+      <div class="field"><label for="svObs">Anotações (não saem no relatório)</label><textarea id="svObs" style="min-height:64px"></textarea></div>
+    </div>
+    <div class="group">
+      <h2>Valores</h2>
+      <div class="grid2 keep">
+        <div class="field"><label for="svValor">Valor cobrado (R$)</label><input id="svValor" inputmode="decimal" placeholder="0,00"></div>
+        <div class="field"><label>Situação</label><div id="svPayState" style="min-height:48px;display:flex;align-items:center"></div></div>
+      </div>
+      <div id="svPays"></div>
+      <div class="notice stack" id="svPayForm" style="gap:10px" hidden>
+        <div class="grid2 keep">
+          <div class="field"><label for="pyValor">Valor recebido</label><input id="pyValor" inputmode="decimal"></div>
+          <div class="field"><label for="pyData">Data</label><input id="pyData" type="date"></div>
+        </div>
+        <div class="field"><label for="pyForma">Forma</label><select id="pyForma"><option>Pix</option><option>Dinheiro</option><option>Transferência</option><option>Cartão</option><option>Boleto</option></select></div>
+        <div class="row"><button class="btn sm primary" id="pyOk">Registrar pagamento</button><button class="btn sm ghost" id="pyNo">Cancelar</button></div>
+      </div>
+      <button class="btn soft" id="svAddPay"><svg><use href="#i-plus"/></svg>Registrar pagamento</button>
+    </div>
+    <div class="group" id="svActions">
+      <h2>Ações</h2>
+      <div class="grid2 keep">
+        <button class="btn wa" id="svWaConf"><svg><use href="#i-wa"/></svg>Confirmar</button>
+        <button class="btn" id="svWaCob"><svg><use href="#i-wa"/></svg>Cobrar</button>
+        <a class="btn" id="svGcal" target="_blank" rel="noopener"><svg><use href="#i-gcal"/></svg>Google Agenda</a>
+        <button class="btn" id="svSent">Marcar enviado</button>
+      </div>
+    </div>
+    <div id="svDelZone"></div>
+  </main>
+  <div class="sheetfoot"><div class="wrap">
+    <button class="btn" id="svSave">Salvar</button>
+    <button class="btn accent" id="svStart"><svg><use href="#i-cam"/></svg><span id="svStartTxt">Iniciar vistoria</span></button>
+  </div></div>
+</div>
+
+<!-- =================== CLIENTES =================== -->
+<div id="vCli" class="sheet" hidden>
+  <header class="top"><div class="wrap">
+    <button class="ibtn" id="cliClose" aria-label="Voltar"><svg><use href="#i-back"/></svg></button>
+    <div class="ttl"><b>Clientes</b><span id="cliSub"></span></div>
+    <button class="ibtn" id="cliNew" aria-label="Novo cliente"><svg><use href="#i-plus"/></svg></button>
+  </div></header>
+  <main class="wrap stack">
+    <div class="field"><input id="cliQ" placeholder="Buscar nome ou telefone…" aria-label="Buscar cliente"></div>
+    <div class="list" id="cliList"></div>
+  </main>
+</div>
+<div id="vCliDet" class="sheet" hidden>
+  <header class="top"><div class="wrap">
+    <button class="ibtn" id="cdClose" aria-label="Voltar"><svg><use href="#i-back"/></svg></button>
+    <div class="ttl"><b id="cdTitle">Cliente</b><span id="cdSub"></span></div>
+  </div></header>
+  <main class="wrap stack">
+    <div class="group">
+      <div class="field"><label for="cdNome">Nome</label><input id="cdNome"></div>
+      <div class="grid2">
+        <div class="field"><label for="cdTel">Telefone / WhatsApp</label><input id="cdTel" inputmode="tel" placeholder="(51) 99999-9999"></div>
+        <div class="field"><label for="cdEmail">E-mail (opcional)</label><input id="cdEmail" type="email"></div>
+      </div>
+      <div class="row"><button class="btn primary" id="cdSave">Salvar</button><button class="btn wa" id="cdWa"><svg><use href="#i-wa"/></svg>WhatsApp</button></div>
+    </div>
+    <div class="kpis" id="cdKpis"></div>
+    <h2>Histórico</h2>
+    <div class="list" id="cdHist"></div>
+    <div id="cdDelZone"></div>
+  </main>
+</div>
+
+<!-- =================== CADASTROS =================== -->
+<div id="vCad" class="sheet" hidden>
+  <header class="top"><div class="wrap">
+    <button class="ibtn" id="cadClose" aria-label="Voltar"><svg><use href="#i-back"/></svg></button>
+    <div class="ttl"><b>Construtoras e condomínios</b><span>Cadastre uma vez, selecione depois</span></div>
+  </div></header>
+  <main class="wrap stack">
+    <h2>Construtoras</h2>
+    <div class="row" style="flex-wrap:nowrap"><div class="field" style="flex:1"><input id="cNewCon" placeholder="Ex.: MRV" aria-label="Nova construtora"></div><button class="btn primary" id="cAddCon">Adicionar</button></div>
+    <div id="cConList" class="list"></div>
+    <h2 style="margin-top:8px">Condomínios</h2>
+    <div class="group">
+      <div class="grid2">
+        <div class="field"><label for="cNewEmp">Nome</label><input id="cNewEmp" placeholder="Ex.: Porto Versalhes"></div>
+        <div class="field"><label for="cNewEmpCon">Construtora</label><select id="cNewEmpCon"></select></div>
+      </div>
+      <div class="field"><label for="cNewEmpEnd">Endereço (opcional)</label><input id="cNewEmpEnd" placeholder="Rua, número, bairro, cidade"></div>
+      <div class="row"><button class="btn primary" id="cAddEmp">Adicionar condomínio</button><button class="btn ghost" id="cCancelEmp" hidden>Cancelar edição</button></div>
+    </div>
+    <div id="cEmpList" class="list"></div>
+  </main>
+</div>
+
+<!-- =================== INDICADORES =================== -->
+<div id="vInd" class="sheet" hidden>
+  <header class="top"><div class="wrap">
+    <button class="ibtn" id="indClose" aria-label="Voltar"><svg><use href="#i-back"/></svg></button>
+    <div class="ttl"><b>Indicadores por construtora</b><span>Serviços realizados e agendados</span></div>
+  </div></header>
+  <main class="wrap stack">
+    <div class="seg full" id="indPer"><button data-p="ano" class="on">Este ano</button><button data-p="12">12 meses</button><button data-p="tudo">Tudo</button></div>
+    <div id="indBody" class="stack"></div>
+  </main>
+</div>
+
+<!-- =================== AJUSTES =================== -->
+<div id="vSet" class="sheet" hidden>
+  <header class="top"><div class="wrap">
+    <button class="ibtn" id="setClose" aria-label="Voltar"><svg><use href="#i-back"/></svg></button>
+    <div class="ttl"><b>Ajustes</b><span>Valem para todos os relatórios</span></div>
+  </div></header>
+  <main class="wrap stack">
+    <div class="group">
+      <h2>Google Drive</h2>
+      <div id="gState" class="muted"></div>
+      <div class="field"><label for="sClient">Client ID do Google (só na primeira vez)</label><input id="sClient" class="mono" placeholder="000000000000-xxxx.apps.googleusercontent.com" autocomplete="off"></div>
+      <div class="field"><label for="sFolder">Pasta principal no Drive</label><input id="sFolder" data-c="pasta"></div>
+      <div class="row"><button class="btn primary" id="gConnect">Conectar ao Google Drive</button><button class="btn ghost" id="gOut" hidden>Desconectar</button></div>
+    </div>
+    <div class="group">
+      <h2>Preços padrão</h2>
+      <div class="grid2 keep">
+        <div class="field"><label for="sPV">Vistoria (R$)</label><input id="sPV" data-c="precoVistoria" inputmode="decimal"></div>
+        <div class="field"><label for="sPR">Revistoria (R$)</label><input id="sPR" data-c="precoRevistoria" inputmode="decimal"></div>
+      </div>
+      <div class="field"><label for="sPix">Chave Pix (vai na mensagem de cobrança)</label><input id="sPix" data-c="pix"></div>
+    </div>
+    <div class="group">
+      <h2>Profissional</h2>
+      <div class="grid2">
+        <div class="field"><label for="sNome">Nome</label><input id="sNome" data-c="nome"></div>
+        <div class="field"><label for="sReg">Título e registro</label><input id="sReg" data-c="registro"></div>
+        <div class="field"><label for="sTel">WhatsApp</label><input id="sTel" data-c="whatsapp" inputmode="tel"></div>
+        <div class="field"><label for="sIg">Instagram</label><input id="sIg" data-c="instagram"></div>
+      </div>
+    </div>
+    <div class="group">
+      <h2>Mensagens de WhatsApp</h2>
+      <p class="muted" style="margin:0;font-size:13px">Use {cliente}, {tipo}, {unidade}, {condominio}, {data}, {hora}, {valor}, {pix} e {profissional}. O app troca pelos dados de cada serviço.</p>
+      <div class="field"><label for="sMsgC">Confirmação do agendamento</label><textarea id="sMsgC" data-c="msgConfirma"></textarea></div>
+      <div class="field"><label for="sMsgE">Envio do relatório</label><textarea id="sMsgE" data-c="msgEnvio"></textarea></div>
+      <div class="field"><label for="sMsgP">Cobrança</label><textarea id="sMsgP" data-c="msgCobranca"></textarea></div>
+    </div>
+    <div class="group">
+      <h2>Imagens do relatório</h2>
+      <div class="imgpick"><div class="pv" id="pvLogo"></div><div class="stack" style="gap:6px"><b>Logo do cabeçalho</b><small class="muted">Versão branca, sobre a faixa escura.</small><div class="row"><label class="btn sm" for="inLogo">Trocar</label><button class="btn sm ghost" data-reset="logo">Padrão</button></div></div></div>
+      <div class="imgpick"><div class="pv light" id="pvCapa"></div><div class="stack" style="gap:6px"><b>Logo da capa</b><small class="muted">Grande, no meio da capa.</small><div class="row"><label class="btn sm" for="inCapa">Trocar</label><button class="btn sm ghost" data-reset="capa">Padrão</button></div></div></div>
+      <div class="imgpick"><div class="pv light" id="pvSelo"></div><div class="stack" style="gap:6px"><b>Selo entre as fotos</b><small class="muted">Pequeno, entre as fotos de cada linha.</small><div class="row"><label class="btn sm" for="inSelo">Trocar</label><button class="btn sm ghost" data-reset="selo">Padrão</button></div></div></div>
+      <input type="file" id="inLogo" accept="image/png,image/jpeg,image/webp" hidden>
+      <input type="file" id="inCapa" accept="image/png,image/jpeg,image/webp" hidden>
+      <input type="file" id="inSelo" accept="image/png,image/jpeg,image/webp" hidden>
+    </div>
+    <div class="group">
+      <h2>Textos do relatório</h2>
+      <div class="field"><label for="sObj">Objetivo (vistoria)</label><textarea id="sObj" data-c="objetivo"></textarea></div>
+      <div class="field"><label for="sObjR">Objetivo (revistoria)</label><textarea id="sObjR" data-c="objetivoRev"></textarea></div>
+      <div class="field"><label for="sAmb">Ambientes (um por linha)</label><textarea id="sAmb" data-c="ambientes" style="min-height:150px"></textarea></div>
+      <div class="field"><label for="sFr">Frases rápidas (uma por linha)</label><textarea id="sFr" data-c="frases" style="min-height:200px"></textarea>
+        <small class="muted">As frases que você mais usa sobem sozinhas para o começo da lista. Frases que você digita com frequência também aparecem como sugestão.</small></div>
+    </div>
+  </main>
+  <div class="sheetfoot"><div class="wrap"><button class="btn primary" id="setSave">Salvar ajustes</button></div></div>
+</div>
+
+<div id="toast" class="toast" hidden role="status"></div>
+
+<script src="config.js"></script>
+<script src="lib/jspdf.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

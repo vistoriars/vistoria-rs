@@ -1,0 +1,17 @@
+{
+  "name": "Vistoria RS",
+  "short_name": "Vistoria RS",
+  "description": "Relatórios de vistoria e revistoria de imóveis com fotos marcadas e PDF salvo no Google Drive.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EEEEEA",
+  "theme_color": "#211F20",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
